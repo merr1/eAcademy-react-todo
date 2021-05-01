@@ -68,7 +68,7 @@ class App extends Component {
   upOrDownTodo = (id, number, direction) => {
     if (
       (direction === "up" && id !== 0) ||
-      (direction === "down" && id !== this.state.todos.length)
+      (direction === "down" && id !== this.state.todos.length - 1)
     ) {
       let upTodo = [...this.state.todos];
       [upTodo[id], upTodo[id - number]] = [upTodo[id - number], upTodo[id]];
